@@ -1,0 +1,41 @@
+name: app
+version: 1.0.0
+
+dependencies:
+  action-controller:
+    github: spider-gazelle/action-controller
+    version: "~> 1.1"
+  jennifer:
+    github: imdrasil/jennifer.cr
+    branch: release/0.7.0
+  sam:
+    github: imdrasil/sam.cr
+  pg:
+    github: will/crystal-pg
+  carbon:
+    github: luckyframework/carbon
+  form_object:
+    github: imdrasil/form_object
+    branch: add_form_nesting
+  pager:
+    github: imdrasil/pager
+  view_model:
+    github: imdrasil/view_model.cr
+    branch: feature/enhance_view_model_object
+  slang:
+    github: jeromegn/slang
+  http_method_emulator:
+    github: imdrasil/http_method_emulator
+  flash_container:
+    github: imdrasil/flash_container.cr
+
+development_dependencies:
+  ameba:
+    github: veelenga/ameba
+  email_opener:
+    github: imdrasil/email_opener
+
+# compile target
+targets:
+  app:
+    main: src/app.cr
