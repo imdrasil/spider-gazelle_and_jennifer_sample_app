@@ -83,6 +83,6 @@ class User < ApplicationRecord
   end
 
   def authenticate(given_password)
-    self if Crypto::Bcrypt::Password.new(password_digest) == given_password
+    self if Crypto::Bcrypt::Password.new(password_digest).verify(given_password)
   end
 end
